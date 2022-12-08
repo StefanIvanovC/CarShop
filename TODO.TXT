@@ -1,0 +1,24 @@
+Add comments by user in every car post +
+Dispaly all posts for sale +
+Print pages +
+Add Paging +
+Create +
+Edit
+Delete +
+TempData Delete alert +
+TempData Create +
+TempData Edit
+Logo 
+Search +
+Search not found view +
+Favicon change something related with car +
+Add some valid data +
+Add Tests
+Add Marketing Redirect to social media +
+Marketing via EmailSander + 
+
+
+
+
+
+
