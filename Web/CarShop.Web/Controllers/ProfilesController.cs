@@ -5,6 +5,7 @@
     using CarShop.Data.Models;
     using CarShop.Services.Data;
     using CarShop.Web.ViewModels.MyProfile;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,7 @@
             this.userManager = userManager;
         }
 
+        [Authorize]
         public IActionResult MyProfile()
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
