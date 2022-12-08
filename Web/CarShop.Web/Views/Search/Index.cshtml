@@ -1,0 +1,29 @@
+﻿@model CarShop.Web.ViewModels.Search.SearchListInputModel
+@{
+    this.ViewData["Title"] = "Search";
+}
+<h1>Found the best cars for you &#128270 </h1>
+<hr>
+<div class="col-md-4 offset-4 p-3 bg-info bg-opacity-10 border border-info rounded-end">
+    <p style="text-align:center"><strong>Search options:</strong></p>
+<form asp-action="List" method="get">
+    <label asp-for="EngineId">Engine type</label>
+    <select asp-for="EngineId" class="form-control">
+        <option value="0">All</option>
+        <option value="1">Disel</option>
+        <option value="2">Gasoline</option>
+        <option value="3">Electric</option>
+        <option value="4">Hibrid</option>
+    </select>
+    <div class="form-group">
+        <label asp-for="MinPrice"></label>
+        <input asp-for="MinPrice" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxPrice"></label>
+        <input asp-for="MaxPrice" class="form-control" />
+    </div>
+    <br>
+    <input type="submit" as class="btn btn-primary" value="Search &#128270;" />
+</form>
+</div>

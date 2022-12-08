@@ -1,0 +1,62 @@
+﻿@model CarShop.Web.ViewModels.Cars.CarListViewModel
+@{
+    this.ViewData["Title"] = "All cars";
+}
+@if (this.TempData["SuccsessfulDeleteCarPost"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["SuccsessfulDeleteCarPost"]</strong> You can add new car post from <a asp-controller="Cars" asp-action="Create" class="link-primary">HERE</a>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<h1>@this.ViewData["Title"]</h1>
+<hr />
+<div class="row">
+    @foreach (var car in Model.Cars)
+    {
+        <div class="card col-md-4" style="width: 18rem">
+            <img src="@car.ImageUrl" class="card-img-top" style="padding-top:10px" alt="Car picture: @car.MarkName">
+            <div class="card-body">
+                <h5 class="card-title"><strong>@car.MarkName</strong></h5>
+                <span><strong>@car.Price BGN</strong></span>
+                <span>@car.RegionName</span>
+                <span>@car.Milage Km</span>
+                <hr>
+                <p class="card-text">@car.Description.Substring(0, 85)...</p>
+                <a asp-action="ById" asp-route-id="@car.Id" class="btn btn-primary">Show more</a>
+            </div>
+        </div>
+    }
+</div>
+<hr />
+<nav aria-label="...">
+    <ul class="pagination justify-content-center">
+        <li class="page-item @if (!Model.HasPreviousPage) { <text>disabled</text> }">
+            <a class="page-link" asp-action="All" asp-route-id="@Model.PreviousPageNumber">Previous</a>
+        </li>
+        @for (int i = Model.PageNumber - 4; i < Model.PageNumber; i++)
+        {
+            if (i > 0)
+            {
+                <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="@i">@i</a></li>
+            }
+        }
+        <li class="page-item active" aria-current="page">
+            <span class="page-link">
+                @Model.PageNumber
+                <span class="sr-only"></span>
+            </span>
+        </li>
+        @for (int i = Model.PageNumber + 1; i <= Model.PageNumber + 4; i++)
+        {
+            if (i <= Model.PageCount)
+            {
+                <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="@i">@i</a></li>
+            }
+        }
+        <li class="page-item @if (!Model.HasNextPage) { <text>disabled</text> }">
+            <a class="page-link" asp-action="All" asp-route-id="@Model.NextPageNumber">Next</a>
+        </li>
+    </ul>
+</nav>

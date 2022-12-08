@@ -1,0 +1,95 @@
+﻿@model CarShop.Web.ViewModels.Cars.CreateCarViewModel
+@{
+    this.ViewData["Title"] = "Add new car";
+}
+<h1>Add new car post!</h1>
+<form method="post" class="col-md-4 offset-4" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="MarkId">Mark</label>
+        <select asp-for="MarkId" class="form-control">
+            <option value="1">Audi</option>
+        </select>
+        <span asp-validation-for="MarkId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TelephoneNumber"></label>
+        <input asp-for="TelephoneNumber" class="form-control" />
+        <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Images"></label>
+        <input asp-for="Images" class="form-control" accept="image/*" id="imgInp" />
+        <span asp-validation-for="Images" class="text-danger"></span>
+    </div>
+    <br>
+        <img id="imgPreview" src="#" alt=" " width="250" />
+    <br>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsUsed">Used</label>
+        <input type="checkbox" asp-for="IsUsed" />
+        <span asp-validation-for="IsUsed" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EngineId"></label>
+        <select asp-for="EngineId" class="form-control">
+            <option value="1">Disel</option>
+            <option value="2">Gasoline</option>
+            <option value="3">Electric</option>
+            <option value="4">Hibrid</option>
+        </select>
+        <span asp-validation-for="EngineId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TransmissionId"></label>
+        <select asp-for="TransmissionId" class="form-control">
+            <option value="1">Manual gearbox</option>
+            <option value="2">Automatic gearbox</option>
+            <option value="3">Semi-automatic gearbox</option>
+        </select>
+        <span asp-validation-for="TransmissionId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RegionId"></label>
+        <select asp-for="RegionId" class="form-control">
+            <option value="1">Blagoevgrad</option>
+        </select>
+        <span asp-validation-for="RegionId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Milage"></label>
+        <input asp-for="Milage" class="form-control" />
+        <span asp-validation-for="Milage" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Year"></label>
+        <input asp-for="Year" class="form-control" />
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+    <hr />
+    <input type="submit" as class="btn btn-primary" />
+</form>
+
+<script>
+    imgInp.onchange = evt => {
+        const [file] = imgInp.files
+        if (file) {
+            imgPreview.src = URL.createObjectURL(file)
+        }
+    }
+</script>

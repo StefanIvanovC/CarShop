@@ -1,0 +1,11 @@
+﻿@using CarShop.Common
+@model CarShop.Web.ViewModels.Home.IndexViewModel
+@{
+    this.ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
+    <p>We have @Model.CarCount cars!</p>
+    <p>We have @Model.MarkCount marks!</p>
+</div>

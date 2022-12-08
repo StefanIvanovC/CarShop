@@ -1,0 +1,57 @@
+﻿@model CarShop.Web.ViewModels.Marketing.MarketingListViewModel
+@if (this.TempData["SuccsessfulEmailMarketingPostCreate"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["SuccsessfulEmailMarketingPostCreate"]</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (this.TempData["SuccsessfulDeleteMarketingHistory"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["SuccsessfulDeleteMarketingHistory"]</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<h1>List of all marketing emails: @Model.Marketings.Count()</h1>
+<hr>
+<ol>
+    @foreach (var marketing in Model.Marketings)
+    {
+        <li>
+            <div class="card">
+                <div class="card-header">
+                    <strong>&#128231; Author email: @marketing.UserUserName </strong> <p class="card-text">Email send on: <strong>&#128467; Date: </strong> @marketing.CreatedOn.ToShortDateString() <strong>&#128346; Time: @marketing.CreatedOn.ToShortTimeString()</strong></p>
+                </div>
+                <div class="card-body">
+                    <p>@marketing.Id</p>
+                    <h5 class="card-title"><strong>Email title: </strong> @marketing.Title</h5>
+                    <h6 class="card-title"><strong>Email description: </strong>@marketing.Description</h6>
+                    <form asp-action="Delete" asp-controller="Marketing" asp-route-id="@marketing.Id" id="DeleteCheckModal"></form>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteMarketing">Delete</button>
+                    <div class="modal" tabindex="-1" id="DeleteMarketing">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Warning!</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Do you want to <strong>DELETE</strong> this email history: @marketing.Title</p>
+                                    <p><strong>Note: </strong> once you delete history there is no restore process. </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                    <button type="button" class="btn btn-danger" onclick="DeleteCheckModal.submit()">Yes</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </li>
+    };
+</ol>

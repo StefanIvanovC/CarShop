@@ -1,0 +1,43 @@
+﻿@model CarShop.Web.ViewModels.Credits.CreditByIdViewModel
+@{
+    this.ViewData["Title"] = "My Credit";
+}
+@if (this.TempData["SuccsessfulApplyingForCredit"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["SuccsessfulApplyingForCredit"]</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<h1>My Credit</h1>
+@if (Model.IsApproved == false)
+{
+    <span>
+        <strong>
+            Waiting for approve...
+        </strong>
+    </span>
+    <div class="spinner-border spinner-border-sm" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div>
+        Your credit is in review by the admins. Come back later to see if it's aproved.
+    </div>
+}
+else
+{
+    <div>
+        <div class="card">
+            <h5 class="card-header">Your credit is Aproved!</h5>
+            <div class="card-body">
+                <h5 class="card-title">Dear, @Model.FirstName your money are waiting you in the bank!</h5>
+                <p><strong>Details:</strong></p>
+                <p>First payment: <strong>@Model.CreatedOn.ToShortDateString()</strong></p>
+                <p>First name: <strong>@Model.FirstName</strong> | Last name : <strong>@Model.LastName</strong>  </p>
+                <p>Total money: <strong>@Model.TotalMoney BGN</strong></p>
+                <p>Period for returning: <strong>@Model.MonthPeriod months</strong></p>
+                <p>Month payment: <strong>@Math.Round(Model.TotalMoney/(double)Model.MonthPeriod) BGN</strong></p>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,35 @@
+﻿@model CarShop.Web.ViewModels.MyProfile.MyCarsListViewModel
+@{
+    this.ViewData["Title"] = "My profile";
+}
+
+@if (this.TempData["SuccsessfulCarPostCreate"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["SuccsessfulCarPostCreate"]</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<h1>@this.ViewData["Title"]</h1>
+
+@if (Model.Cars.Count() == 0)
+{
+    <h1>You don't have cars! Make new post!</h1>
+}
+else
+{
+    @foreach (var car in Model.Cars)
+    {
+        <div class="card">
+            <div class="card-header">
+                <strong>@car.MarkName</strong>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">Created on: @car.CreatedOn.ToShortDateString()</p>
+                <a href="#" class="btn btn-primary">Full information</a>
+            </div>
+        </div>
+    }
+}
+
