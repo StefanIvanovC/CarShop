@@ -9,7 +9,7 @@
     {
         Task CreateAsync(CreateCarViewModel input, string userId, string imagePath);
 
-        IEnumerable<CarInListViewModel> GetAll(int page, int itemsPerPage = 9);
+        IEnumerable<CarInListViewModel> GetAll(int page, int itemsPerPage = 4);
 
         int GetCount();
 

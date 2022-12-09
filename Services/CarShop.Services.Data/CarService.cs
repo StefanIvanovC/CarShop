@@ -14,7 +14,7 @@
 
     public class CarService : ICarService
     {
-        private readonly string[] estensions = new[] { "jpg", "png" };
+        private readonly string[] estensions = new[] { "jpg", "png", "img" };
         private readonly IDeletableEntityRepository<Car> carsRepository;
 
         public CarService(IDeletableEntityRepository<Car> carsRepository)
@@ -74,7 +74,7 @@
             await this.carsRepository.SaveChangesAsync();
         }
 
-        public IEnumerable<CarInListViewModel> GetAll(int page, int itemsPerPage = 9)
+        public IEnumerable<CarInListViewModel> GetAll(int page, int itemsPerPage = 4)
         {
             var car = this.carsRepository.AllAsNoTracking()
                 .OrderByDescending(x => x.Id)

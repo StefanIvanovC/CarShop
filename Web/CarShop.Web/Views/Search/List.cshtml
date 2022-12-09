@@ -12,23 +12,24 @@ else
 {
     <h1>List of the cars of your search criterias &#128270; </h1>
     <hr />
-        <div class="row">
+    <div class="row" style="display: flex; justify-content:space-between;">
         @foreach (var car in Model.Cars)
         {
-            <div class="card col-md-4" style="width: 18rem;">
+            <div class="card col-md-4" style="width: 16rem">
                 <img src="@car.ImageUrl" class="card-img-top" style="padding-top:10px" alt="Car picture: @car.MarkName">
                 <div class="card-body">
                     <h5 class="card-title"><strong>@car.MarkName</strong></h5>
-                    <span><strong>@car.Price BGN</strong></span>
-                    <span>@car.RegionName</span>
-                    <span>@car.Milage Km</span>
+                    <span><strong>Price:</strong> @car.Price BGN</span><br>
+                    <span><strong>Location:</strong> @car.RegionName</span><br>
+                    <span><strong>Milage:</strong> @car.Milage Km</span><br>
                     <hr>
-                    <p class="card-text">@car.Description.Substring(0, 85)...</p>
-                    <a asp-controller="Cars" asp-action="ById" asp-route-id="@car.Id" class="btn btn-primary">Show more</a>
+                    <p class="card-text">@car.Description.Substring(0, 50)...</p>
+                    <a asp-action="ById" asp-route-id="@car.Id" class="btn btn-primary">Show more</a>
                 </div>
             </div>
         }
     </div>
+    <hr>
     <p style="text-align:center"><a asp-controller="Search" asp-action="Index" class="btn btn-primary btn-lg">Search &#128270</a> </p>
     <hr />
     <nav aria-label="...">
