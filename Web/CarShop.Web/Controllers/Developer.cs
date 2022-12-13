@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace CarShop.Web.Controllers
+﻿namespace CarShop.Web.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     public class Developer : Controller
     {
         public IActionResult Info()
