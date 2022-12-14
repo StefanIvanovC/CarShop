@@ -2,65 +2,106 @@
 @{
     this.ViewData["Title"] = "Ask for car credit";
 }
-<h1>@this.ViewData["Title"]</h1>
-
-
-<form method="post" class="col-md-4 offset-4">
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="FirstName"></label>
-        <input asp-for="FirstName" class="form-control" />
-        <span asp-validation-for="FirstName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="LastName"></label>
-        <input asp-for="LastName" class="form-control" />
-        <span asp-validation-for="LastName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="IsWorking">Are you curently working?</label>
-        <input type="checkbox" asp-for="IsWorking" />
-        <span asp-validation-for="IsWorking" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="TotalMoney">Size of the credit in <strong>BGN</strong></label>
-        <input asp-for="TotalMoney" class="form-control" />
-        <span asp-validation-for="TotalMoney" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="MonthPeriod">Months period for returning the credit</label>
-        <select asp-for="MonthPeriod" class="form-control">
-            <option value="6">6 months</option>
-            <option value="12">12 months (1 Year)</option>
-            <option value="24">24 months (2 Year)</option>
-            <option value="36">36 months (3 Year)</option>
-        </select>
-        <span asp-validation-for="MonthPeriod" class="text-danger"></span>
-    </div>
-    <hr />
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Apply now
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Credit approvel info</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div asp-validation-summary="All" class="text-danger"></div>
-                    Important: Your credit must be recview from admin before it's approved!
-                    Make sure your information is right, you can only apply for credit just once!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" as class="btn btn-primary" value="Apply for credit!" />
-                </div>
+<h1>@this.ViewData["Title"] &#128663;</h1>
+<hr>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><strong>How to apply for car credit?</strong></h5>
+                <hr>
+                <h6 class="card-text">
+                    Here are the steps to apply for a credit card.
+                </h6>
+                <br>
+                <ol>
+                    <li>Check your credit scores.</li>
+                    <li>Determine what type of card you need.</li>
+                    <li>Understand the terms on your credit card application.</li>
+                    <li>Choose where to apply.</li>
+                    <li>Check to see if you're prequalified.</li>
+                    <li>Prepare for a knock to your credit.</li>
+                    <li>Use credit card best practices.</li>
+                    <li>Fill the form <strong>Credit</strong></li>
+                </ol>
+                <p><strong>Important:</strong> When you send the form, you must wait for our admins to decide if the credit will be approved!</p>
+                <p>
+                    If your credit is <strong>declined:</strong> Sorry motori! &#10060;
+                </p>
+                <p>
+                    If your credit is <strong>approved:</strong> Congratulation! Now pay! &#9989;
+                </p>
             </div>
         </div>
     </div>
-</form>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Car credit form:</strong></h5>
+                <hr>
+                <form method="post" class="col-md-8 offset-2">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="FirstName"> First name</label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LastName"> Last name</label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label asp-for="IsWorking">Are you curently working?</label>
+                        <input type="checkbox" asp-for="IsWorking" />
+                        <span asp-validation-for="IsWorking" class="text-danger"></span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label asp-for="TotalMoney">Size of the credit in <strong>BGN</strong></label>
+                        <input asp-for="TotalMoney" class="form-control" />
+                        <span asp-validation-for="TotalMoney" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MonthPeriod">Months period for returning the credit</label>
+                        <select asp-for="MonthPeriod" class="form-control">
+                            <option value="6">6 months</option>
+                            <option value="12">12 months (1 Year)</option>
+                            <option value="24">24 months (2 Year)</option>
+                            <option value="36">36 months (3 Year)</option>
+                        </select>
+                        <span asp-validation-for="MonthPeriod" class="text-danger"></span>
+                    </div>
+                    <hr />
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Apply now
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Credit approvel info</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                    Important: Your credit must be recview from admin before it's approved!
+                                    Make sure your information is right, you can only apply for credit just once!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <input type="submit" as class="btn btn-primary" value="Apply for credit!" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
