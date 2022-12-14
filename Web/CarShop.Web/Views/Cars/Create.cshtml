@@ -3,237 +3,252 @@
     this.ViewData["Title"] = "Add new car";
 }
 <h1>Add new car post!</h1>
-<form method="post" class="col-md-4 offset-4" enctype="multipart/form-data">
+<hr>
+<h5>Fill all the fields, then click on <strong>"Create"</strong> button.</br> If some data is invalid there will be messages but don't panic, it's all organic.</h2>
+<form method="post" enctype="multipart/form-data">
     <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="MarkId">Mark</label>
-        <select asp-for="MarkId" class="form-control">
-            <option value="1">AC</option>
-            <option value="2">Abarth</option>
-            <option value="3">Acura</option>
-            <option value="4">Aixam</option>
-            <option value="5">Alfa Romeo</option>
-            <option value="6">Alpina</option>
-            <option value="7">Aro</option>
-            <option value="8">Asia</option>
-            <option value="9">Aston martin</option>
-            <option value="10">Audi</option>
-            <option value="11">Austin</option>
-            <option value="12">BMW</option>
-            <option value="13">Bentley</option>
-            <option value="14">Berliner</option>
-            <option value="15">Bertone</option>
-            <option value="16">Borgward</option>
-            <option value="17">Brilliance</option>
-            <option value="18">Bugatti</option>
-            <option value="19">Buick</option>
-            <option value="20">Cadillac</option>
-            <option value="21">Carbodies</option>
-            <option value="22">Chery</option>
-            <option value="23">Chevrolet</option>
-            <option value="24">Chrysler</option>
-            <option value="25">Citroen</option>
-            <option value="26">Corvette</option>
-            <option value="27">Cupra</option>
-            <option value="28">DONGFENG</option>
-            <option value="29">DS</option>
-            <option value="30">Dacia</option>
-            <option value="31">Daewoo</option>
-            <option value="32">Daihatsu</option>
-            <option value="33">Daimler</option>
-            <option value="34">Dodge</option>
-            <option value="35">Dr</option>
-            <option value="36">Eagle</option>
-            <option value="37">Ferrari</option>
-            <option value="38">Fiat</option>
-            <option value="39">Ford</option>
-            <option value="40">GOUPIL</option>
-            <option value="41">Gaz</option>
-            <option value="42">Geely</option>
-            <option value="43">Genesis</option>
-            <option value="44">Geo</option>
-            <option value="45">Gmc</option>
-            <option value="46">Gonow</option>
-            <option value="47">Great Wall</option>
-            <option value="48">Haval</option>
-            <option value="49">Heinkel</option>
-            <option value="50">Hillman</option>
-            <option value="51">Honda</option>
-            <option value="52">Hummer</option>
-            <option value="53">Hyundai</option>
-            <option value="54">Ifa</option>
-            <option value="55">Infiniti</option>
-            <option value="56">Innocenti</option>
-            <option value="57">Isuzu</option>
-            <option value="58">Iveco</option>
-            <option value="59">JAC</option>
-            <option value="60">JAS</option>
-            <option value="61">Jaguar</option>
-            <option value="62">Jeep</option>
-            <option value="63">Jpx</option>
-            <option value="64">Kia</option>
-            <option value="65">Lada</option>
-            <option value="66">Laforza</option>
-            <option value="67">Lamborghini</option>
-            <option value="68">Lancia</option>
-            <option value="69">Land Rover</option>
-            <option value="70">Landwind</option>
-            <option value="71">Lexus</option>
-            <option value="72">Lifan</option>
-            <option value="73">Lincoln</option>
-            <option value="74">Lotus</option>
-            <option value="75">MG</option>
-            <option value="76">Mahindra</option>
-            <option value="77">Maserati</option>
-            <option value="78">Matra</option>
-            <option value="79">Maybach</option>
-            <option value="80">Mazda</option>
-            <option value="81">McLaren</option>
-            <option value="82">Mercedes-Benz</option>
-            <option value="83">Mercury</option>
-            <option value="84">Mg</option>
-            <option value="85">Mini</option>
-            <option value="86">Mitsubishi</option>
-            <option value="87">Morgan</option>
-            <option value="88">Moskvich</option>
-            <option value="89">Nissan</option>
-            <option value="90">Opel</option>
-            <option value="91">Peugeot</option>
-            <option value="92">Pgo</option>
-            <option value="93">Pontiac</option>
-            <option value="94">Porsche</option>
-            <option value="95">Renault</option>
-            <option value="96">Rolls-Royce</option>
-            <option value="97">Rover</option>
-            <option value="98">SECMA</option>
-            <option value="99">Saab</option>
-            <option value="100">Samand</option>
-            <option value="101">Santana</option>
-            <option value="102">Saturn</option>
-            <option value="103">Scion</option>
-            <option value="104">Seat</option>
-            <option value="105">Shatenet</option>
-            <option value="106">Shuanghuan</option>
-            <option value="107">Simca</option>
-            <option value="108">Skoda</option>
-            <option value="109">Smart</option>
-            <option value="110">Ssang Yong</option>
-            <option value="111">Subaru</option>
-            <option value="112">Suzuki</option>
-            <option value="113">Talbot</option>
-            <option value="114">Tata</option>
-            <option value="115">Tavria</option>
-            <option value="116">Tazzari</option>
-            <option value="117">Tempo</option>
-            <option value="118">Terberg</option>
-            <option value="119">Tesla</option>
-            <option value="120">Toyota</option>
-            <option value="121">Trabant</option>
-            <option value="122">Triumph</option>
-            <option value="122">VW</option>
-            <option value="123">Volga</option>
-            <option value="124">Volvo</option>
-            <option value="125">Warszawa</option>
-            <option value="126">Wartburg</option>
-        </select>
-        <span asp-validation-for="MarkId" class="text-danger"></span>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="MarkId">Mark</label>
+                        <select asp-for="MarkId" class="form-control">
+                            <option value="1">AC</option>
+                            <option value="2">Abarth</option>
+                            <option value="3">Acura</option>
+                            <option value="4">Aixam</option>
+                            <option value="5">Alfa Romeo</option>
+                            <option value="6">Alpina</option>
+                            <option value="7">Aro</option>
+                            <option value="8">Asia</option>
+                            <option value="9">Aston martin</option>
+                            <option value="10">Audi</option>
+                            <option value="11">Austin</option>
+                            <option value="12">BMW</option>
+                            <option value="13">Bentley</option>
+                            <option value="14">Berliner</option>
+                            <option value="15">Bertone</option>
+                            <option value="16">Borgward</option>
+                            <option value="17">Brilliance</option>
+                            <option value="18">Bugatti</option>
+                            <option value="19">Buick</option>
+                            <option value="20">Cadillac</option>
+                            <option value="21">Carbodies</option>
+                            <option value="22">Chery</option>
+                            <option value="23">Chevrolet</option>
+                            <option value="24">Chrysler</option>
+                            <option value="25">Citroen</option>
+                            <option value="26">Corvette</option>
+                            <option value="27">Cupra</option>
+                            <option value="28">DONGFENG</option>
+                            <option value="29">DS</option>
+                            <option value="30">Dacia</option>
+                            <option value="31">Daewoo</option>
+                            <option value="32">Daihatsu</option>
+                            <option value="33">Daimler</option>
+                            <option value="34">Dodge</option>
+                            <option value="35">Dr</option>
+                            <option value="36">Eagle</option>
+                            <option value="37">Ferrari</option>
+                            <option value="38">Fiat</option>
+                            <option value="39">Ford</option>
+                            <option value="40">GOUPIL</option>
+                            <option value="41">Gaz</option>
+                            <option value="42">Geely</option>
+                            <option value="43">Genesis</option>
+                            <option value="44">Geo</option>
+                            <option value="45">Gmc</option>
+                            <option value="46">Gonow</option>
+                            <option value="47">Great Wall</option>
+                            <option value="48">Haval</option>
+                            <option value="49">Heinkel</option>
+                            <option value="50">Hillman</option>
+                            <option value="51">Honda</option>
+                            <option value="52">Hummer</option>
+                            <option value="53">Hyundai</option>
+                            <option value="54">Ifa</option>
+                            <option value="55">Infiniti</option>
+                            <option value="56">Innocenti</option>
+                            <option value="57">Isuzu</option>
+                            <option value="58">Iveco</option>
+                            <option value="59">JAC</option>
+                            <option value="60">JAS</option>
+                            <option value="61">Jaguar</option>
+                            <option value="62">Jeep</option>
+                            <option value="63">Jpx</option>
+                            <option value="64">Kia</option>
+                            <option value="65">Lada</option>
+                            <option value="66">Laforza</option>
+                            <option value="67">Lamborghini</option>
+                            <option value="68">Lancia</option>
+                            <option value="69">Land Rover</option>
+                            <option value="70">Landwind</option>
+                            <option value="71">Lexus</option>
+                            <option value="72">Lifan</option>
+                            <option value="73">Lincoln</option>
+                            <option value="74">Lotus</option>
+                            <option value="75">MG</option>
+                            <option value="76">Mahindra</option>
+                            <option value="77">Maserati</option>
+                            <option value="78">Matra</option>
+                            <option value="79">Maybach</option>
+                            <option value="80">Mazda</option>
+                            <option value="81">McLaren</option>
+                            <option value="82">Mercedes-Benz</option>
+                            <option value="83">Mercury</option>
+                            <option value="84">Mg</option>
+                            <option value="85">Mini</option>
+                            <option value="86">Mitsubishi</option>
+                            <option value="87">Morgan</option>
+                            <option value="88">Moskvich</option>
+                            <option value="89">Nissan</option>
+                            <option value="90">Opel</option>
+                            <option value="91">Peugeot</option>
+                            <option value="92">Pgo</option>
+                            <option value="93">Pontiac</option>
+                            <option value="94">Porsche</option>
+                            <option value="95">Renault</option>
+                            <option value="96">Rolls-Royce</option>
+                            <option value="97">Rover</option>
+                            <option value="98">SECMA</option>
+                            <option value="99">Saab</option>
+                            <option value="100">Samand</option>
+                            <option value="101">Santana</option>
+                            <option value="102">Saturn</option>
+                            <option value="103">Scion</option>
+                            <option value="104">Seat</option>
+                            <option value="105">Shatenet</option>
+                            <option value="106">Shuanghuan</option>
+                            <option value="107">Simca</option>
+                            <option value="108">Skoda</option>
+                            <option value="109">Smart</option>
+                            <option value="110">Ssang Yong</option>
+                            <option value="111">Subaru</option>
+                            <option value="112">Suzuki</option>
+                            <option value="113">Talbot</option>
+                            <option value="114">Tata</option>
+                            <option value="115">Tavria</option>
+                            <option value="116">Tazzari</option>
+                            <option value="117">Tempo</option>
+                            <option value="118">Terberg</option>
+                            <option value="119">Tesla</option>
+                            <option value="120">Toyota</option>
+                            <option value="121">Trabant</option>
+                            <option value="122">Triumph</option>
+                            <option value="122">VW</option>
+                            <option value="123">Volga</option>
+                            <option value="124">Volvo</option>
+                            <option value="125">Warszawa</option>
+                            <option value="126">Wartburg</option>
+                        </select>
+                        <span asp-validation-for="MarkId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description"></label>
+                        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TelephoneNumber"></label>
+                        <input asp-for="TelephoneNumber" class="form-control" />
+                        <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Images"></label>
+                        <input asp-for="Images" class="form-control" accept="image/*" id="imgInp" />
+                        <span asp-validation-for="Images" class="text-danger"></span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label asp-for="IsUsed">Used</label>
+                        <input type="checkbox" asp-for="IsUsed" />
+                        <span asp-validation-for="IsUsed" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <img id="imgPreview" src="#" alt=" " width="250" />
+                    <div class="form-group">
+                        <label asp-for="Price"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EngineId"></label>
+                        <select asp-for="EngineId" class="form-control">
+                            <option value="1">Disel</option>
+                            <option value="2">Gasoline</option>
+                            <option value="3">Electric</option>
+                            <option value="4">Hibrid</option>
+                        </select>
+                        <span asp-validation-for="EngineId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TransmissionId"></label>
+                        <select asp-for="TransmissionId" class="form-control">
+                            <option value="1">Manual gearbox</option>
+                            <option value="2">Automatic gearbox</option>
+                            <option value="3">Semi-automatic gearbox</option>
+                        </select>
+                        <span asp-validation-for="TransmissionId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RegionId"></label>
+                        <select asp-for="RegionId" class="form-control">
+                            <option value="1">Blagoevgrad</option>
+                            <option value="2">Burgas</option>
+                            <option value="3">Varna</option>
+                            <option value="4">Veliko Turnovo</option>
+                            <option value="5">Vidin</option>
+                            <option value="6">Vratca</option>
+                            <option value="7">Gabrovo</option>
+                            <option value="8">Karjali</option>
+                            <option value="9">Kustendil</option>
+                            <option value="10">Lovech</option>
+                            <option value="11">Montana</option>
+                            <option value="12">Pazardjic</option>
+                            <option value="13">Pernik</option>
+                            <option value="14">Pleven</option>
+                            <option value="15">Plovdiv</option>
+                            <option value="16">Razgrad</option>
+                            <option value="17">Ruse</option>
+                            <option value="18">Sliven</option>
+                            <option value="19">Silistra</option>
+                            <option value="20">Smolqn</option>
+                            <option value="21">Sofiq</option>
+                            <option value="22">Stara Zagora</option>
+                            <option value="23">Tyrgovishte</option>
+                            <option value="24">Haskovo</option>
+                            <option value="25">Shumen</option>
+                            <option value="26">Qmbol</option>
+                        </select>
+                        <span asp-validation-for="RegionId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Milage"></label>
+                        <input asp-for="Milage" class="form-control" />
+                        <span asp-validation-for="Milage" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Year"></label>
+                        <input asp-for="Year" class="form-control" />
+                        <span asp-validation-for="Year" class="text-danger"></span>
+                    </div>
+                    <br>
+                    <input type="submit" as class="btn btn-primary btn-sm" value="Create" />
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="TelephoneNumber"></label>
-        <input asp-for="TelephoneNumber" class="form-control" />
-        <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Images"></label>
-        <input asp-for="Images" class="form-control" accept="image/*" id="imgInp" />
-        <span asp-validation-for="Images" class="text-danger"></span>
-    </div>
-    <br>
-    <img id="imgPreview" src="#" alt=" " width="250" />
-    <br>
-    <div class="form-group">
-        <label asp-for="Price"></label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="IsUsed">Used</label>
-        <input type="checkbox" asp-for="IsUsed" />
-        <span asp-validation-for="IsUsed" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="EngineId"></label>
-        <select asp-for="EngineId" class="form-control">
-            <option value="1">Disel</option>
-            <option value="2">Gasoline</option>
-            <option value="3">Electric</option>
-            <option value="4">Hibrid</option>
-        </select>
-        <span asp-validation-for="EngineId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="TransmissionId"></label>
-        <select asp-for="TransmissionId" class="form-control">
-            <option value="1">Manual gearbox</option>
-            <option value="2">Automatic gearbox</option>
-            <option value="3">Semi-automatic gearbox</option>
-        </select>
-        <span asp-validation-for="TransmissionId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="RegionId"></label>
-        <select asp-for="RegionId" class="form-control">
-            <option value="1">Blagoevgrad</option>
-            <option value="2">Burgas</option>
-            <option value="3">Varna</option>
-            <option value="4">Veliko Turnovo</option>
-            <option value="5">Vidin</option>
-            <option value="6">Vratca</option>
-            <option value="7">Gabrovo</option>
-            <option value="8">Karjali</option>
-            <option value="9">Kustendil</option>
-            <option value="10">Lovech</option>
-            <option value="11">Montana</option>
-            <option value="12">Pazardjic</option>
-            <option value="13">Pernik</option>
-            <option value="14">Pleven</option>
-            <option value="15">Plovdiv</option>
-            <option value="16">Razgrad</option>
-            <option value="17">Ruse</option>
-            <option value="18">Sliven</option>
-            <option value="19">Silistra</option>
-            <option value="20">Smolqn</option>
-            <option value="21">Sofiq</option>
-            <option value="22">Stara Zagora</option>
-            <option value="23">Tyrgovishte</option>
-            <option value="24">Haskovo</option>
-            <option value="25">Shumen</option>
-            <option value="26">Qmbol</option>
-        </select>
-        <span asp-validation-for="RegionId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Milage"></label>
-        <input asp-for="Milage" class="form-control" />
-        <span asp-validation-for="Milage" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Year"></label>
-        <input asp-for="Year" class="form-control" />
-        <span asp-validation-for="Year" class="text-danger"></span>
-    </div>
-    <hr />
-    <input type="submit" as class="btn btn-primary" value="Create"/>
 </form>
 
 <script>
