@@ -4,26 +4,91 @@
 }
 <h1>Found the best cars for you &#128270 </h1>
 <hr>
-<div class="col-md-4 offset-4 p-3 bg-info bg-opacity-10 border border-info rounded-end">
-    <p style="text-align:center"><strong>Search options:</strong></p>
-<form asp-action="List" method="get">
-    <label asp-for="EngineId">Engine type</label>
-    <select asp-for="EngineId" class="form-control">
-        <option value="0">All</option>
-        <option value="1">Disel</option>
-        <option value="2">Gasoline</option>
-        <option value="3">Electric</option>
-        <option value="4">Hibrid</option>
-    </select>
-    <div class="form-group">
-        <label asp-for="MinPrice"></label>
-        <input asp-for="MinPrice" class="form-control" />
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Search:</strong></h5>
+                <hr>
+                <div class="col-md-10 offset-1 p-3 bg-info bg-opacity-10 border border-info rounded-end">
+                    <p style="text-align:center"><strong>Search options:</strong></p>
+                    <form asp-action="List" method="get">
+                        <div class="form-group">
+                            <label asp-for="RegionName">Region</label>
+                            <select asp-for="RegionName" class="form-control">
+                                <option value="All">All</option>
+                                <option value="Blagoevgrad">Blagoevgrad</option>
+                                <option value="Burgas">Burgas</option>
+                                <option value="Varna">Varna</option>
+                                <option value="Veliko Turnovo">Veliko Turnovo</option>
+                                <option value="Vidin">Vidin</option>
+                                <option value="Vratca">Vratca</option>
+                                <option value="Gabrovo">Gabrovo</option>
+                                <option value="Karjali">Karjali</option>
+                                <option value="Kustendil">Kustendil</option>
+                                <option value="Lovech">Lovech</option>
+                                <option value="Montana">Montana</option>
+                                <option value="Pazardjic">Pazardjic</option>
+                                <option value="Pernik">Pernik</option>
+                                <option value="Pleven">Pleven</option>
+                                <option value="Plovdiv">Plovdiv</option>
+                                <option value="Razgrad">Razgrad</option>
+                                <option value="Ruse">Ruse</option>
+                                <option value="Sliven">Sliven</option>
+                                <option value="Silistra">Silistra</option>
+                                <option value="Smolqn">Smolqn</option>
+                                <option value="Sofiq">Sofiq</option>
+                                <option value="Stara Zagora">Stara Zagora</option>
+                                <option value="Tyrgovishte">Tyrgovishte</option>
+                                <option value="Haskovo">Haskovo</option>
+                                <option value="Shumen">Shumen</option>
+                                <option value="Qmbol">Qmbol</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="EngineId">Engine</label>
+                            <select asp-for="EngineId" class="form-control">
+                                <option value="0">All</option>
+                                <option value="1">Disel</option>
+                                <option value="2">Gasoline</option>
+                                <option value="3">Electric</option>
+                                <option value="4">Hibrid</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="MinPrice">Starting price in <strong>BGN</strong></label>
+                            <input asp-for="MinPrice" type="number" value="0" placeholder="All" class="form-control" /> 
+
+                            <label asp-for="MaxPrice">Maximum price in <strong>BGN</strong></label>
+                            <input asp-for="MaxPrice" type="number" value="0" placeholder="All" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Millage">Millage in <strong>Km</strong></label>
+                            <input asp-for="Millage" type="number" value="0" placeholder="All" class="form-control" />
+                        </div>
+                        <br>
+                        <input type="submit" as class="btn btn-primary" value="Search &#128270;" />
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="MaxPrice"></label>
-        <input asp-for="MaxPrice" class="form-control" />
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><strong>How "Search" working..</strong></h5>
+                <hr>
+                <h6 class="card-text">
+                    Here are the steps to use our amazing search.
+                </h6>
+                <br>
+                <ol>
+                    <li>Fill in the desired fields with the characteristics of the cars you wish to find</li>
+                    <li>Click on the button "Search"</li>
+                </ol>
+                <p>Maybe some ads here</p>
+                <img width="600" height="290" src="https://cdn1.efbet.com/efbet/landingpage/images/Landing_obsh_bonusite%20sa%20vajni.png"></img>
+            </div>
+        </div>
     </div>
-    <br>
-    <input type="submit" as class="btn btn-primary" value="Search &#128270;" />
-</form>
 </div>

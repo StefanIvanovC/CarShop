@@ -17,6 +17,6 @@
 
         Task DeleteAsync(int id);
 
-        IEnumerable<CarInListViewModel> GetAllSearch(int minPrice, int maxPrice, uint engineId);
+        IEnumerable<CarInListViewModel> GetAllSearch(int minPrice, int maxPrice, uint engineId, int millage, string regionName);
     }
 }

@@ -24,7 +24,7 @@
         {
             var cars = new CarListViewModel()
             {
-                Cars = this.carService.GetAllSearch(input.MinPrice, input.MaxPrice, input.EngineId),
+                Cars = this.carService.GetAllSearch(input.MinPrice, input.MaxPrice, input.EngineId, input.Millage, input.RegionName),
             };
 
             return this.View(cars);

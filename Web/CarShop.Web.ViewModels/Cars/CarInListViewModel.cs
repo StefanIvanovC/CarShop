@@ -10,6 +10,8 @@
     {
         public int Id { get; set; }
 
+        public int EngineId { get; set; }
+
         public string ImageUrl { get; set; }
 
         public string MarkName { get; set; }

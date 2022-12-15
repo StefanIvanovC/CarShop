@@ -9,5 +9,9 @@
         public int MaxPrice { get; set; }
 
         public int MinPrice { get; set; }
+
+        public int Millage { get; set; }
+
+        public string RegionName { get; set; }
     }
 }

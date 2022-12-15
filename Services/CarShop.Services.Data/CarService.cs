@@ -85,13 +85,37 @@
             return car;
         }
 
-        public IEnumerable<CarInListViewModel> GetAllSearch(int minPrice, int maxPrice, uint engineId)
+        public IEnumerable<CarInListViewModel> GetAllSearch(int minPrice, int maxPrice, uint engineId, int millage, string regionName)
         {
             var cars = this.carsRepository.AllAsNoTracking()
-            .OrderByDescending(x => x.CreatedOn)
-            .Where(x => x.Price >= minPrice && x.Price <= maxPrice && x.EngineId == engineId)
-            .To<CarInListViewModel>()
-            .ToList();
+                .OrderByDescending(x => x.CreatedOn)
+                .To<CarInListViewModel>()
+                .ToList();
+
+            if (regionName != "All")
+            {
+                cars = cars.Where(x => x.RegionName == regionName).ToList();
+            }
+
+            if (engineId != 0)
+            {
+                cars = cars.Where(x => x.EngineId == engineId).ToList();
+            }
+
+            if (minPrice != 0)
+            {
+                cars = cars.Where(x => x.Price >= minPrice).ToList();
+            }
+
+            if (maxPrice != 0)
+            {
+                cars = cars.Where(x => x.Price <= maxPrice).ToList();
+            }
+
+            if (millage != 0)
+            {
+                cars = cars.Where(c => c.Milage < millage).ToList();
+            }
 
             return cars;
         }
