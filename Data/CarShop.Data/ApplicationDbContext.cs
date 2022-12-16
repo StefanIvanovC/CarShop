@@ -42,6 +42,10 @@
 
         public DbSet<Marketing> Marketings { get; set; }
 
+        public DbSet<Extra> Extras { get; set; }
+
+        public DbSet<CarExtra> CarExtras { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
