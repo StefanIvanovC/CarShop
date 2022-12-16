@@ -53,5 +53,7 @@
                         x.Images.FirstOrDefault().RemoteImageUrl :
                         "/images/cars/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension));
         }
+
+        public string Color { get; set; }
     }
 }

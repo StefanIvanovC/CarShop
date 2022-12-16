@@ -13,7 +13,16 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     Credit
 </button>
+@if (Model.Color != null)
+{
+    <span><strong>Color: <span class="dot" style="height: 25px; width: 25px;  background-color: @Model.Color; border-radius: 50%; display: inline-block;"></span></strong></span>
 
+    
+}
+else
+{
+    <span><strong>Color: &#10006;</strong></span>
+}
 <form asp-action="Delete" asp-route-id="@Model.Id" id="DeleteCheckModal"></form>
 <form asp-action="Edit" asp-route-id="@Model.Id" id="EditCheckModal"></form>
 <hr>

@@ -38,6 +38,7 @@
                 CreatedByUserId = userId,
                 IsUsed = input.IsUsed,
                 TelephoneNumber = input.TelephoneNumber,
+                Color = input.Color,
             };
 
             foreach (var image in input.Images)

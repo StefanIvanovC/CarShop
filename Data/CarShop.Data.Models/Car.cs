@@ -49,5 +49,7 @@
         public virtual ICollection<Image> Images { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }
+
+        public string Color { get; set; }
     }
 }

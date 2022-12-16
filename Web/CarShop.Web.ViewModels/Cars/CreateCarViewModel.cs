@@ -50,5 +50,8 @@
         [Required]
         [RegularExpression(@"08[789]\d{7}", ErrorMessage = "Characters are not allowed.")]
         public string TelephoneNumber { get; set; }
+
+        [Required]
+        public string Color { get; set; }
     }
 }
