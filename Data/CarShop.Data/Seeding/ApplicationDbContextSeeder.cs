@@ -30,6 +30,7 @@
                               new EngineSeeder(),
                               new TransmissionSeeder(),
                               new RegionSeeder(),
+                              new ExtraSeeder(),
                           };
 
             foreach (var seeder in seeders)
