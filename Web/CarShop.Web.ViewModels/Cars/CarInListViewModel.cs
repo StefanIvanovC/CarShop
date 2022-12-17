@@ -1,5 +1,6 @@
 ﻿namespace CarShop.Web.ViewModels.Cars
 {
+    using System.Collections.Generic;
     using System.Linq;
 
     using AutoMapper;

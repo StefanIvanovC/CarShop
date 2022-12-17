@@ -248,6 +248,33 @@
                         <input asp-for="Year" class="form-control" />
                         <span asp-validation-for="Year" class="text-danger"></span>
                     </div>
+                    <p>Extras:</p>
+                    <div class="form-group">
+                        <input type="checkbox" class="ticketAddition" name="360-degree parking camera" value="360-degree parking camera"> 360-degree parking camera<br>
+                        <input type="checkbox" class="ticketAddition" name="Four-wheel drive (4WD)" value="Four-wheel drive (4WD)"> Four-wheel drive (4WD)<br>
+                        <input type="checkbox" class="ticketAddition" name="Adaptive LED headlights" value="Adaptive LED headlights"> Adaptive LED headlights<br>
+                        <input type="checkbox" class="ticketAddition" name="Folding mirrors" value="Folding mirrors"> Folding mirrors<br>
+                        <input type="checkbox" class="ticketAddition" name="Heated steering wheelear" value="Heated steering wheel"> Heated steering wheel<br>
+                        <input type="checkbox" class="ticketAddition" name="Adaptive cruise control" value="Adaptive cruise control"> Adaptive cruise control<br>
+                        <input type="checkbox" class="ticketAddition" name="Remote parking" value="Remote parking"> Remote parking<br>
+                        <input type="checkbox" class="ticketAddition" name="Antilock Brakes" value="Antilock Brakes"> Antilock Brakes<br>
+                        <input type="checkbox" class="ticketAddition" name="Electronic Stability Control" value="Electronic Stability Control"> Electronic Stability Control<br>
+                        <input type="checkbox" class="ticketAddition" name="Adaptive Headlights" value="Adaptive Headlights"> Adaptive Headlights<br>
+                        <input type="checkbox" class="ticketAddition" name="Traction Control" value="Traction Control"> Traction Control <br>
+                        <input type="checkbox" class="ticketAddition" name="Security Alarm System" value="Security Alarm System"> Security Alarm System <br>
+                        <input type="checkbox" class="ticketAddition" name="Dash CameraDash Camera" value="Dash CameraDash Camera"> Dash CameraDash Camera <br>
+                        <input type="checkbox" class="ticketAddition" name="GPS Indicator" value="GPS Indicator"> GPS Indicator <br>
+                        <input type="checkbox" class="ticketAddition" name="Leather seats" value="Leather seats"> Leather seats <br>
+                        <input type="checkbox" class="ticketAddition" name="Sunroof/moonroof" value="Sunroof/moonroof"> Sunroof/moonroof<br>
+                        <input type="checkbox" class="ticketAddition" name="Heated seats" value="Heated seats"> Heated seats<br>
+                        <input type="checkbox" class="ticketAddition" name="Backup camera" value="Backup camera"> Backup camera <br>
+                        <input type="checkbox" class="ticketAddition" name="Navigation system" value="Navigation system"> Navigation system<br>
+                        <input type="checkbox" class="ticketAddition" name="Bluetooth" value="Bluetooth"> Bluetooth<br>
+                        <input type="checkbox" class="ticketAddition" name="Remote start" value="Remote start"> Remote start<br>
+                        <input type="checkbox" class="ticketAddition" name="Blind spot monitoring" value="Blind spot monitoring"> Blind spot monitoring<br>
+                        <input type="checkbox" class="ticketAddition" name="Third-row seating" value="Third-row seating"> Third-row seating<br>
+                        <input type="checkbox" class="ticketAddition" name="Apple CarPlay/Android Auto" value="Apple CarPlay/Android Auto"> Apple CarPlay/Android Auto<br>
+                    </div>
                     <br>
                     <input type="submit" as class="btn btn-primary btn-sm" value="Create" />
                 </div>
@@ -255,12 +282,22 @@
         </div>
     </div>
 </form>
+@section Scripts {
+    <script>
+        $(".ticketAddition").change(function () {
 
-<script>
-    imgInp.onchange = evt => {
-        const [file] = imgInp.files
-        if (file) {
-            imgPreview.src = URL.createObjectURL(file)
+            var names = $(".ticketAddition:checked").map(function () {
+                return this.name;
+            }).get();
+
+            console.log(names)
+        });
+
+        imgInp.onchange = evt => {
+            const [file] = imgInp.files
+            if (file) {
+                imgPreview.src = URL.createObjectURL(file)
+            }
         }
-    }
-</script>
+    </script>
+}

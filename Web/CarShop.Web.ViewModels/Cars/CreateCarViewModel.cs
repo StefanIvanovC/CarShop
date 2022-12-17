@@ -53,5 +53,7 @@
 
         [Required]
         public string Color { get; set; }
+
+        public IEnumerable<CarExtrasInputModel> Extras { get; set; }
     }
 }
