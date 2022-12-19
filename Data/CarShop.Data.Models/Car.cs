@@ -10,7 +10,7 @@
         {
             this.Images = new HashSet<Image>();
             this.Comments = new HashSet<Comment>();
-            this.Extras = new HashSet<CarExtra>();
+            this.CarExtras = new HashSet<CarExtra>();
         }
 
         public decimal Price { get; set; }
@@ -53,6 +53,8 @@
 
         public string Color { get; set; }
 
-        public virtual ICollection<CarExtra> Extras { get; set; }
+        public virtual ICollection<CarExtra> CarExtras { get; set; }
+
+        public string Features { get; set; }
     }
 }
