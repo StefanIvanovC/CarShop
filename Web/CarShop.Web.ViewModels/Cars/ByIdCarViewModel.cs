@@ -55,5 +55,7 @@
         }
 
         public string Color { get; set; }
+
+        public string Features { get; set; }
     }
 }

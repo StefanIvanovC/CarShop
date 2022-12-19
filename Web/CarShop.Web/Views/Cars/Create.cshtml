@@ -276,9 +276,9 @@
                         <input type="checkbox" class="ticketAddition" name="Apple CarPlay/Android Auto" value="Apple CarPlay/Android Auto"> Apple CarPlay/Android Auto<br>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Extras"></label>
-                        <input asp-for="Extras" id="InputString" value="names" class="form-control" />
-                        <span asp-validation-for="Extras" class="text-danger"></span>
+                        <label asp-for="Features"></label>
+                        <input asp-for="Features" id="InputString" value="names" class="form-control" />
+                        <span asp-validation-for="Features" class="text-danger"></span>
                     </div>
                     <br>
                     <input type="submit" as class="btn btn-primary btn-sm" value="Create" />
@@ -291,13 +291,13 @@
     <script>
         $(".ticketAddition").change(function () {
 
-            var names = $(".ticketAddition:checked").map(function () {
+            var listOfFeatures = $(".ticketAddition:checked").map(function () {
                 return this.name;
             }).get();
 
-            console.log(names)
+            console.log(listOfFeatures)
 
-            document.getElementById('InputString').value = names.toString();
+            document.getElementById('InputString').value = listOfFeatures.toString();
         });
 
         imgInp.onchange = evt => {

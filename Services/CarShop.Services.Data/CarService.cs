@@ -39,6 +39,7 @@
                 IsUsed = input.IsUsed,
                 TelephoneNumber = input.TelephoneNumber,
                 Color = input.Color,
+                Features = input.Features,
             };
 
             foreach (var image in input.Images)

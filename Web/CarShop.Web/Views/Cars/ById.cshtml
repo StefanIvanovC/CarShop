@@ -100,7 +100,11 @@ else
     </ul>
 </div>
 <hr>
-
+<span><strong>Features: </strong></span>
+@foreach (var featur in Model.Features.Split(',').ToList())
+{
+    <span><strong>&#9989; @featur </strong></span>
+}
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
