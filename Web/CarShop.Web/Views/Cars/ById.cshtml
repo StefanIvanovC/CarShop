@@ -6,7 +6,7 @@
 <hr>
 <span><strong>Created on: &#128467; Date: </strong> @Model.CreatedOn.ToShortDateString() <strong>&#128346; Time:  </strong> @Model.CreatedOn.ToShortTimeString() </span>
 
-<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteCar">Delete</button> 
+<button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteCar">Delete</button>
 <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#EditCar">Edit</button>
 <button type="button" class="btn btn-info" onclick="window.print()">Print this page</button>
 <span><strong> | I don't have enough money, I need credit -> </strong></span>
@@ -17,7 +17,7 @@
 {
     <span><strong>Color: <span class="dot" style="height: 25px; width: 25px;  background-color: @Model.Color; border-radius: 50%; display: inline-block;"></span></strong></span>
 
-    
+
 }
 else
 {
@@ -101,9 +101,12 @@ else
 </div>
 <hr>
 <span><strong>Features: </strong></span>
-@foreach (var featur in Model.Features.Split(',').ToList())
+@if (Model.Features != null)
 {
-    <span><strong>&#9989; @featur </strong></span>
+    @foreach (var featur in Model.Features.Split(',').ToList())
+    {
+        <span><strong>&#9989; @featur </strong></span>
+    }
 }
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">

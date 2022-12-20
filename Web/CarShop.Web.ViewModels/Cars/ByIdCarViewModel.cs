@@ -44,6 +44,10 @@
 
         public IEnumerable<CarCommentViewModel> Comments { get; set; }
 
+        public string Color { get; set; }
+
+        public string Features { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Car, ByIdCarViewModel>()
@@ -53,9 +57,5 @@
                         x.Images.FirstOrDefault().RemoteImageUrl :
                         "/images/cars/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension));
         }
-
-        public string Color { get; set; }
-
-        public string Features { get; set; }
     }
 }
