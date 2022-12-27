@@ -2,7 +2,7 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
-    public class Developer : Controller
+    public class DeveloperController : Controller
     {
         public IActionResult Info()
         {
