@@ -1,4 +1,5 @@
-﻿@{
+﻿@model CarShop.Web.ViewModels.Contacts.ContactInputFormModel
+@{
     this.ViewData["Title"] = "Contact us!";
 }
 <div class="container contact-form">
@@ -11,7 +12,7 @@
         <div class="col-md-6">
             <div class="contact-image">
                 <h3>If you have question, bother us with this form!</h3>
-                <h4>Go on our pigeon will deliver your message, eventualy... </h4>
+                <h4>Go on, our pigeon will deliver your message, eventualy... </h4>
                 <hr>
                 <form method="post">
                     <div asp-validation-summary="All" class="text-danger"></div>

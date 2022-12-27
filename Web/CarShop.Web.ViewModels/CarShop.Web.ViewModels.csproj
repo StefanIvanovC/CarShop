@@ -29,6 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Contacts\ContactInputFormModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Credits\CreateCreditViewModel.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
