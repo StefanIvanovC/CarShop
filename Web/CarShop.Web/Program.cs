@@ -69,6 +69,7 @@
             services.AddTransient<ICommentService, CommentService>();
             services.AddTransient<IProfileService, ProfileService>();
             services.AddTransient<IMarketingService, MarketingService>();
+            services.AddTransient<IQuestionService, QuestionService>();
         }
 
         private static void Configure(WebApplication app)

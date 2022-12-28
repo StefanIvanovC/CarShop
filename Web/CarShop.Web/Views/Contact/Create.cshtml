@@ -2,6 +2,13 @@
 @{
     this.ViewData["Title"] = "Contact us!";
 }
+@if (this.TempData["SuccsessfulQuestionCreate"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["SuccsessfulQuestionCreate"]</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
 <div class="container contact-form">
     <div class="row">
         <div class="col-md-6">
