@@ -46,6 +46,8 @@
 
         public DbSet<CarExtra> CarExtras { get; set; }
 
+        public DbSet<Question> Questions { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
