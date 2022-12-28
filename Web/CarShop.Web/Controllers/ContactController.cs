@@ -39,6 +39,12 @@
             await this.questionService.CreateAsynk(input, user.Id);
 
             this.TempData["SuccsessfulQuestionCreate"] = "You have successfully submitted your question!";
+            return this.RedirectToAction("ThankYou", "Contact", new { area = string.Empty });
+        }
+
+        [Authorize]
+        public IActionResult ThankYou()
+        {
             return this.View();
         }
     }

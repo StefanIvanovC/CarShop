@@ -1,0 +1,22 @@
+﻿@{
+    this.ViewData["Title"] = "Thank You!";
+}
+@if (this.TempData["SuccsessfulQuestionCreate"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["SuccsessfulQuestionCreate"]</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+<div class="jumbotron text-center">
+    <h1 class="display-3"><b><strong>THANK YOU</strong></b></h1>
+    <h4> for your question, we value our time, so maybe we won't answer you</h4>
+    <span style='font-size:150px;'>&#9989;</span>
+    <p class="lead"><b><strong>We will contact you ASAP</strong></b> Please check your email</p>
+    <p class="lead">We can call you, so hold you phone tight &#128222;</p>
+    <p>
+        <strong>More questions?</strong>  <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Create","Contact")'">Ask again</button>
+    </p>
+</div>
