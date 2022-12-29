@@ -36,5 +36,8 @@ namespace CarShop.Data.Models
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
 
         public virtual ICollection<Question> Questions { get; set; }
+
+        // Points
+        public int Points { get; set; }
     }
 }

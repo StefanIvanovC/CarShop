@@ -1,0 +1,61 @@
+﻿@{
+    this.ViewData["Title"] = "Shop";
+}
+<h1>@this.ViewData["Title"]</h1>
+<hr>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+            <div class="card-header"><strong><b>SHOP</b></strong></div>
+            <div class="card-body">
+                <h5 class="card-title">Our shop don't use real money!</h5>
+                <p class="card-text">However, you can still buy items with your point!</p>
+                <nav>
+                    <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Shop" asp-action="All">Go shoping</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+            <div class="card-header"><strong><b>POINTS</b></strong></div>
+            <div class="card-body">
+                <h5 class="card-title">Check your available points</h5>
+                <p class="card-text">You can use this points to buy items in our shop!</p>
+                <nav>
+                    <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Shop" asp-action="Points">Learn more</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card text-white bg-dark mb-3" style="max-width: 25rem;">
+            <div class="card-header"><strong><b>ADD ITEM</b></strong></div>
+            <div class="card-body">
+                <h5 class="card-title">Admin only</h5>
+                <p class="card-text">Add new items for sale.</p>
+                <nav>
+                    <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Shop" asp-action="Add">Add item</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card text-white bg-dark" style="max-width: 25rem; height:stretch">
+            <img src="~/Shop.jpg" class="img-thumbnail" alt="Shop picture">
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card text-white bg-dark" style="max-width: 25rem; height:auto">
+            <img src="~/Points.jpg" class="img-thumbnail" alt="Points picture">
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card text-white bg-dark" style="max-width: 25rem; height:auto">
+           <img src="~/Items.jpg" class="img-thumbnail" alt="Items picture">
+        </div>
+    </div>
+</div>

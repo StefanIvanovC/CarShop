@@ -46,13 +46,16 @@
                                 <a class="nav-link text-dark" asp-area="Administration" asp-controller="Marks" asp-action="Index">Marks Admin</a>
                             </li>
                         }
-                        <li class="nav-item">
-                           <a class="nav-link text-dark" asp-area="" asp-controller="Profiles" asp-action="MyProfile">My Cars</a>
-                        </li>
                         @if (this.User.Identity.IsAuthenticated)
                         {
                         <li class="nav-item">
+                           <a class="nav-link text-dark" asp-area="" asp-controller="Profiles" asp-action="MyProfile">My Cars</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Marketing" asp-action="RedirectTo">Marketing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="RedirectTo">Shop</a>
                         </li>
                         }
                         <li class="nav-item">
