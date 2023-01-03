@@ -19,5 +19,6 @@ Site print screens:
 ![ContactUsPrtSc](https://user-images.githubusercontent.com/58903216/209679569-e0b9a1af-2f3f-4fef-9cbf-5ad0b7ef9933.png)
 ![ThankYouPrtSc](https://user-images.githubusercontent.com/58903216/209798437-02560ee5-c0fe-4d40-bf8f-66c643b427d8.png)
 ![OptionsShopPrtSc](https://user-images.githubusercontent.com/58903216/209958848-9d0174f1-5fb0-489d-9a97-95d0a39f75a7.png)
+![PointsPrtSc](https://user-images.githubusercontent.com/58903216/210371885-b46f5e90-cf4a-48a1-b38d-fcc5ffa86307.png)
 CarShop database diagram
 ![CarShopDbDiagram](https://user-images.githubusercontent.com/58903216/209638168-c195ca2e-1974-40ba-802f-afb9196c53c0.png)
