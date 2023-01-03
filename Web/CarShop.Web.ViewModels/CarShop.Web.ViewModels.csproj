@@ -50,10 +50,9 @@
     <Compile Update="MyProfile\MyCarsListViewModel.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Shop\" />
+    <Compile Update="Shop\ByIdPointsViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 
 </Project>
