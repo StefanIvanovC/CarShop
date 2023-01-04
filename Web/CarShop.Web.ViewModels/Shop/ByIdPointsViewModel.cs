@@ -2,6 +2,7 @@
 {
     public class ByIdPointsViewModel
     {
+        public string UserName { get; set; }
         public int PointsCount { get; set; }
     }
 }

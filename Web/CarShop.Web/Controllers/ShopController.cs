@@ -1,11 +1,9 @@
 ﻿namespace CarShop.Web.Controllers
 {
     using CarShop.Data.Models;
-    using CarShop.Web.ViewModels.Cars;
     using CarShop.Web.ViewModels.Shop;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
-    using System.Threading.Tasks;
 
     public class ShopController : Controller
     {
@@ -28,10 +26,10 @@
 
         public IActionResult Points()
         {
-            //ToDo. Get userPoints from cookie
-            var user = this.userManager.GetUserAsync(this.User);
+            var userName = this.User.Identity.Name;
             var viewModel = new ByIdPointsViewModel()
             {
+                UserName = userName,
                 PointsCount = 1,
             };
             return this.View(viewModel);
