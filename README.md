@@ -1,7 +1,11 @@
 # CarShop
-Migrate CarShop from Gitlab to Github for publishing in future from AZURE.
-Asp.NET MVC web app, C#, Javascript, MSSQL, Bootstrap, HTML, CSS.
-Site print screens:
+CarShop is ASP.NET automotive, classifieds site like "Mobile.Bg", "Auto.bg" e.t.<br>
+In this site I use: Asp.NET MVC web app, C#, Javascript, MSSQL, Bootstrap, HTML and CSS.
+
+Migrate CarShop from Gitlab to Github for publishing in future from AZURE. old commits of CarShop - https://gitlab.com/stefanivanovc
+In the app you can found not only car posts, i add SHOP for car items, MARKETING pages, CALCULATOR for taxes, LOANS (CREDITS). DEVELOPER, SEARCH and more.<br>
+You can check some of the print screens..<br>
+Site print screens: (Some of the Prt sc are old now they have much more functionality and better UI)
 ![CarByIdPrtSc](https://user-images.githubusercontent.com/58903216/207328396-68066002-bc16-4454-9ca5-eff7ce3deea0.png)
 ![CreditFormPrtSc](https://user-images.githubusercontent.com/58903216/207856696-06680907-df78-45f3-828b-3e8fdd7609d3.png)
 ![CreateCarFixPrtSc](https://user-images.githubusercontent.com/58903216/207856714-bb5a17fc-98f5-4cf0-afd6-454cb5f6e751.png)
@@ -20,5 +24,7 @@ Site print screens:
 ![ThankYouPrtSc](https://user-images.githubusercontent.com/58903216/209798437-02560ee5-c0fe-4d40-bf8f-66c643b427d8.png)
 ![OptionsShopPrtSc](https://user-images.githubusercontent.com/58903216/209958848-9d0174f1-5fb0-489d-9a97-95d0a39f75a7.png)
 ![PointsPrtSc](https://user-images.githubusercontent.com/58903216/210371885-b46f5e90-cf4a-48a1-b38d-fcc5ffa86307.png)
+![AddProductFormPrtSc](https://user-images.githubusercontent.com/58903216/210547464-52107a5c-a845-471c-a1d0-2bf52e8089b2.png)
+
 CarShop database diagram
 ![CarShopDbDiagram](https://user-images.githubusercontent.com/58903216/209638168-c195ca2e-1974-40ba-802f-afb9196c53c0.png)
