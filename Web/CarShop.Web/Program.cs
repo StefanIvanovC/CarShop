@@ -70,6 +70,7 @@
             services.AddTransient<IProfileService, ProfileService>();
             services.AddTransient<IMarketingService, MarketingService>();
             services.AddTransient<IQuestionService, QuestionService>();
+            services.AddTransient<IShopService, ShopService>();
         }
 
         private static void Configure(WebApplication app)

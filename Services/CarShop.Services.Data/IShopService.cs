@@ -6,6 +6,6 @@
 
     public interface IShopService
     {
-        Task AddAsync(AddItemShopInputModel input, string userId, string imagePath);
+        Task AddAsync(AddItemShopInputModel input, string userId);
     }
 }

@@ -2,30 +2,70 @@
 @{
     this.ViewData["Title"] = "Add items";
 }
+@if (this.TempData["SuccsessfulAddProductItem"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>@this.TempData["SuccsessfulAddProductItem"]</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
 <h1>@this.ViewData["Title"]</h1>
-<p>Fill the form to add new item for sale in the shop.</p>
-<form>
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Price"></label>
-        <input asp-for="Price" class="form-control" />
-        <span asp-validation-for="Price" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Image"></label>
-        <input asp-for="Image" class="form-control" accept="image/*" id="imgInp" />
-        <span asp-validation-for="Image" class="text-danger"></span>
+<body style="background-color:#ff9999">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4> Fill the form to add new item for sale </h4>
+                    <p> Items will be visible in the shop</p>
+                </div>
+            </div>
+        </div>
+        <a asp-area="" asp-controller="Shop" asp-action="All" class="btn btn-primary btn-lg col-sm-6 text-capitalize"><strong><b>GO<br>TO<br>S H O P</b></strong></a>
     </div>
     <br>
-    <input type="submit" class="btn btn-primary btn-sm" value="Add" />
-</form>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <img src="~/addproduct.jpg" class="img-fluid" />
+                </div>
+                <br>
+                <div class="card-body">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Add <strong><b>NEW</b></strong> product</h4>
+                    <form>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input asp-for="Name" class="form-control" placeholder="Product Name *" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description"></label>
+                            <textarea asp-for="Description" class="form-control" rows="3" placeholder="Product description .."></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Price"></label>
+                            <input asp-for="Price" class="form-control" placeholder="Price in points currency *" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Image"></label>
+                            <input asp-for="Image" class="form-control" accept="image/*" id="imgInp" />
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+                        <br>
+                        <input type="submit" class="btn btn-primary btn" value="Add Product" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

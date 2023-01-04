@@ -76,6 +76,7 @@
             return this.View(car);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
