@@ -27,7 +27,13 @@
 
         public IActionResult All()
         {
-            return this.View();
+            var viewModel = new ProductsListViewModel()
+            {
+                ProductList = this.shopService.GetAllProducts(),
+                ProductCount = this.shopService.GetCount(),
+            };
+
+            return this.View(viewModel);
         }
 
         public IActionResult Points()

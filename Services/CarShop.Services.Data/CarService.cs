@@ -78,13 +78,13 @@
 
         public IEnumerable<CarInListViewModel> GetAll(int page, int itemsPerPage = 4)
         {
-            var car = this.carsRepository.AllAsNoTracking()
+            var cars = this.carsRepository.AllAsNoTracking()
                 .OrderByDescending(x => x.Id)
                 .Skip((page - 1) * itemsPerPage).Take(itemsPerPage)
                 .To<CarInListViewModel>()
                 .ToList();
 
-            return car;
+            return cars;
         }
 
         public IEnumerable<CarInListViewModel> GetAllSearch(int minPrice, int maxPrice, uint engineId, int millage, string regionName)
