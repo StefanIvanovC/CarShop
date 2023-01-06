@@ -1,4 +1,8 @@
-﻿@{
-    this.ViewData["Title"] = "Shop all items";
+﻿@model CarShop.Web.ViewModels.Shop.ByIdPointsViewModel
+@{
+    this.ViewData["Title"] = "Shop, all items";
 }
 <h1>@this.ViewData["Title"]</h1>
+<h4>Wellcome to our shop!</h4>
+<h5><b>@Model.UserName</b> you can use your points to buy products!</h5>
+<p>Your ballance: <b>@Model.PointsCount</b></p>
