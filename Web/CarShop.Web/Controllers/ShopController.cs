@@ -14,7 +14,7 @@
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IShopService shopService;
 
-        public ShopController(UserManager<ApplicationUser> userManager, IShopService shopService)
+        public ShopController(UserManager<ApplicationUser> userManager, IShopService shopService,)
         {
             this.userManager = userManager;
             this.shopService = shopService;
@@ -48,14 +48,12 @@
         }
 
         [Authorize]
-        [Authorize(Roles = "Admin")]
-        public IActionResult Create()
+        public IActionResult Add()
         {
             return this.View();
         }
 
         [Authorize]
-        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Add(AddItemShopInputModel input)
         {
