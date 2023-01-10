@@ -16,7 +16,7 @@
             }
 
             await dbContext.Transmissions.AddAsync(new Transmission { Type = "Manual gearbox" });
-            await dbContext.Transmissions.AddAsync(new Transmission { Type = "Automatic gearbox"});
+            await dbContext.Transmissions.AddAsync(new Transmission { Type = "Automatic gearbox" });
             await dbContext.Transmissions.AddAsync(new Transmission { Type = "Semi-automatic gearbox" });
 
             await dbContext.SaveChangesAsync();

@@ -14,7 +14,7 @@
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IShopService shopService;
 
-        public ShopController(UserManager<ApplicationUser> userManager, IShopService shopService,)
+        public ShopController(UserManager<ApplicationUser> userManager, IShopService shopService)
         {
             this.userManager = userManager;
             this.shopService = shopService;

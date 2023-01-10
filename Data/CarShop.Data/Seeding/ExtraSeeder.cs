@@ -15,7 +15,7 @@
                 return;
             }
 
-            await dbContext.Extras.AddAsync(new Extra {Name = "360-degree parking camera" });
+            await dbContext.Extras.AddAsync(new Extra { Name = "360-degree parking camera" });
             await dbContext.Extras.AddAsync(new Extra { Name = "Four-wheel drive (4WD)" });
             await dbContext.Extras.AddAsync(new Extra { Name = "Adaptive LED headlights" });
             await dbContext.Extras.AddAsync(new Extra { Name = "Folding mirrors" });

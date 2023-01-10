@@ -14,6 +14,6 @@
 
         public virtual ApplicationUser CreatedbyUser { get; set; }
 
-       //TODO ADD Image for product other table
+       // TODO ADD Image for product other table
     }
 }
