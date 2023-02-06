@@ -44,7 +44,7 @@
 
         public DbSet<Extra> Extras { get; set; }
 
-        public DbSet<CarExtra> CarExtras { get; set; }
+        public DbSet<CarExtra> CarExtras { get; set; }'\]77;;;;;;;;;;;;;;;;;;;;;;;;;;bbbbbbbbbbbtkno 6rn58ucnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnfrkcv67[9
 
         public DbSet<Question> Questions { get; set; }
 
